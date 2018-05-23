@@ -9,8 +9,7 @@ import {Location}  from '@angular/common';
 })
 export class GobackComponent implements OnInit {
 
-  @Input() userBg;
-  @Input() userColor;
+  
 
  @Output()
  notify:EventEmitter <string> =new EventEmitter<string>();

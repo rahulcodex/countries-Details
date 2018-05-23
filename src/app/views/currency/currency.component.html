@@ -1,7 +1,6 @@
-<div class="row p-5"   >
-    <div clas="col-md-12" style="text-align: center">
-    <app-goback  [userColor]="'#A52A2A'"  [userBg]="'white'"  (click)= goBack($event)></app-goback>
-    
+<div class="p-5">
+    <app-goback     (click)= goBack($event)></app-goback>
+</div>
   
 <div class="row container p-5 ml-5 "  *ngIf= "currency" style="text-align:  center; ">
    
@@ -9,7 +8,7 @@
 
     <img class="card-img-top"  src="{{all.flag}}"  alt="img-top"> 
  
-    <app-all-countries   [name] =" all.name "  [region] =" all.region  "  [capital] =" all.capital"  [subregion] ="''" [code]="''" ></app-all-countries>
+    <app-all-countries   [name] =" all.name "  [region] =" all.region  "  [capital] =" all.capital"  [subregion] ="all.subregion" [code]="''" ></app-all-countries>
   
   </div>
 </div>
