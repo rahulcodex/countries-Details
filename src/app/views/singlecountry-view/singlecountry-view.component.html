@@ -1,0 +1,190 @@
+
+<div class="row container m-4 "  *ngIf= "singleView"  style="text-align: center" >
+    <div   *ngFor="let all of singleView">
+        <div class="card bg-dark text-white" style="width: 80rem ; height:auto">
+        <img class="card-img" src="{{all.flag}}" alt="Card image">
+        <div class="card-img-overlay">
+
+          <div class="row p-3 ">
+            <div class="col-md-3">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Name</div>
+                <div class="card-body">
+                    <h5 class="card-title" style="color:black">:{{all.name}}</h5>
+                  </div>
+              </div>
+              </div>
+
+              <div class="col-md-3">
+                  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                      <div class="card-header">Capital</div>
+                      <div class="card-body">
+                          <p class="card-text" style="color:black"><b>{{all.capital}}</b></p>
+                        </div>
+                    </div>
+               </div>
+
+              <div class="col-md-3">
+                  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                      <div class="card-header">Region</div>
+                      <div class="card-body">
+                          <p class="card-text" style="color:black">{{all.region}}</p>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                      <div class="card-header">Population</div>
+                      <div class="card-body">
+                          <p class="card-text" style="color:black">{{all.population}}</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row p-3">
+
+                
+
+                    <div class="col-md-3">
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">altSpellings:</div>
+                            <div class="card-body">
+                                <p class="card-text" style="color:black">{{all.altSpellings}}</p>
+                              </div>
+                          </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Population:</div>
+                            <div class="card-body">
+                                <p class="card-text" style="color:black">{{all.population}}</p>
+                              </div>
+                          </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">demonym:</div>
+                            <div class="card-body">
+                                <p class="card-text" style="color:black">{{all.demonym}}</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Area:</div>
+                                <div class="card-body">
+                                    <p class="card-text" style="color:black">{{all.area}}</p>
+                                  </div>
+                              </div>
+                        </div>
+                </div>
+
+                <div class="row p-3">
+                    
+
+                        
+
+
+                        <div class="col-md-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Borders:</div>
+                                <div class="card-body">
+                        <p class="card-text"style="color:black">{{all.borders}}</p>
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="col-md-3">
+                          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                              <div class="card-header">nativeName:</div>
+                              <div class="card-body">
+                             <p class="card-text"style="color:black">{{all.nativeName}}</p>
+                      </div>
+                    </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                              <div class="card-header">Currency Name:</div>
+                              <div class="card-body">
+                                  <p class="card-text" style="color:black" *ngIf="all.currencies.length>0">
+                                      <span *ngFor="let Currency of all.currencies"> {{Currency.name}}</span>
+                                   <span *ngIf="all.currencies.length<1">Not Available</span> </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                          <div class="card-header">Currency Code:</div>
+                          <div class="card-body">
+                              <p class="card-text" style="color:black" *ngIf ="all.currencies.length>0">
+                                  <span *ngFor="let Currency of all.currencies "><a [routerLink]="['/currency',Currency.code] "  style="color: brown">{{Currency.code}}</a></span>
+                                  <span *ngIf="all.currencies.length<1">Not Available</span> </p>
+                         
+                  </div>
+                </div>
+                 
+                </div>
+                      
+                    </div>
+
+                    
+
+                        <div class="row p-3">
+
+                            <div class="col-md-3">
+                                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Currency symbol:</div>
+                                    <div class="card-body">
+                                        <p class="card-text"  style="color:black" *ngIf="all.currencies.length>0">
+                                            <span *ngFor="let Currency of all.currencies"> {{Currency.symbol}}</span>
+                                            <span *ngIf="all.currencies.length<1">Not Available</span> </p>
+                            </div>
+                          </div>
+
+                              
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                        <div class="card-header">Language:</div>
+                                        <div class="card-body">
+                                            <p class="card-text" style="color:black" *ngIf ="all.languages.length>0">
+                                                <span *ngFor ="let lang of all.languages , let first =first , let last =last" >{{lang.name}}{{last?'':','}}</span>
+                                                <span *ngIf="all.languages.length<1">Not Available</span> </p>
+                                      
+                                </div>
+                              </div>
+         
+                              </div>
+
+                              <div class="col-md-3">
+
+                                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">Language Code:</div>
+                                    <div class="card-body">
+                                        <p class="card-text" style="color:black" *ngIf ="all.languages.length>0">
+                                            <span *ngFor ="let lang of all.languages , let first =first , let last =last" ><a [routerLink]="['/language',lang.iso639_1]"  style="color: brown">{{lang.iso639_1}}{{last?'':','}}</a></span>
+                                            <span *ngIf="all.languages.length<1">Not Available</span> </p>
+                                  
+                            </div>
+                          </div>
+     
+                          </div>
+                            </div>
+
+                
+           
+            
+        
+                            <app-goback  [userColor]="'#A52A2A'"  [userBg]="'white'"   (click)= goBack($event)></app-goback>
+        </div>
+      </div>
+  </div>
+  </div>
+
+
+  

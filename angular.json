@@ -23,9 +23,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "C:/Users/rahul parmar/Desktop/New  edwisor/angularprojects/countries-view/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "C:/Users/rahul parmar/Desktop/New  edwisor/angularprojects/countries-view/node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "C:/Users/rahul parmar/Desktop/New  edwisor/angularprojects/countries-view/node_modules/jquery/dist/jquery.min.js",
+              "C:/Users/rahul parmar/Desktop/New  edwisor/angularprojects/countries-view/node_modules/popper.js/dist/esm/popper.min.js",
+              "C:/Users/rahul parmar/Desktop/New  edwisor/angularprojects/countries-view/node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

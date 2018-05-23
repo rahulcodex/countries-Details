@@ -1,0 +1,19 @@
+
+
+
+  <div  class="bg">
+<div class="row" *ngIf ="region">
+  <div class="col-md-3 p-5 m-5 " *ngFor ="let all of region" >
+
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container" >
+            <h5 class="display-5" style="text-align:center"><a [routerLink]="['/allcountry' , all.region]">Region:{{all.region}}</a></h5>
+           
+        </div>
+
+  
+</div>
+</div>
+</div>
+</div>
+
